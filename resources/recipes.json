@@ -1,0 +1,28 @@
+{
+  "recipes": [
+  {
+    "id": "1",
+    "title": "waffle",
+    "ingredients": "eggs, flour, water, sugar",
+    "difficulty": "easy"
+  },
+    {
+    "id": "2",
+    "title": "boiled potato",
+    "ingredients": "potato, water",
+    "difficulty": "easy"
+  },
+    {
+    "id": "3",
+    "title": "noodles",
+    "ingredients": "noodles, water",
+    "difficulty": "easy"
+  },
+    {
+    "id": "4",
+    "title": "omelette",
+    "ingredients": "eggs, oil",
+    "difficulty": "medium"
+  }
+]
+}
