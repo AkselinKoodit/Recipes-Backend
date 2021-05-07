@@ -16,23 +16,30 @@ class HomeScreenController extends AbstractController
 // /recipe/add?name=pancake&ingredients=flour,egg,milk&difficulty=medium
 
     /**
-     * @Route("/recipe/add?name={name}&ingredients={ingredients}&difficulty={difficulty}",name="add_new_recipe")
+     * @Route("/recipe/add", name="add_new_recipe")
      */
-    public function addRecipe($name, $ingredients, $difficulty){
+    public function addRecipe(){
+
         $entityManager = $this->getDoctrine()->getManager();
 
-        $newRecipe2 = new Recipe();
-        $newRecipe2->setName($name);
-        $newRecipe2->setIngredients($ingredients);
-        $newRecipe2->setDifficulty($difficulty);
+        $newRecipe = new Recipe();
+        $newRecipe ->setName('Omelette');
+        $newRecipe ->setIngredients('eggs, oil, milk');
+        $newRecipe ->setDifficulty('easy');
 
+        $newRecipe1 = new Recipe();
+        $newRecipe1 ->setName('banana pancakes');
+        $newRecipe1 ->setIngredients('banana, eggs, oil');
+        $newRecipe1 ->setDifficulty('easy');
 
-        $entityManager->persist($this.recipe);
+        $entityManager->persist($newRecipe);
+        $entityManager->persist($newRecipe1);
 
         $entityManager->flush();
 
-        return new Response('trying to add new recipe...' . $this.recipe->getId());
+        return new Response('trying to add new recipe...' . $newRecipe->getId() . " and " . $newRecipe1->getId());
     }
+
     
     /**
      * @Route("/recipe/more?name={name}&ingredients={ingredients}&difficulty={difficulty}", name="put_a_recipe", methods={"GET"})
@@ -67,27 +74,6 @@ class HomeScreenController extends AbstractController
         // ]);
 
 
-    //     $entityManager = $this->getDoctrine()->getManager();
-
-    //     $newRecipe = new Recipe();
-    //     $newRecipe ->setName('Omelette');
-    //     $newRecipe ->setIngredients('eggs, oil, milk');
-    //     $newRecipe ->setDifficulty('easy');
-
-    //     $newRecipe1 = new Recipe();
-    //     $newRecipe1 ->setName('banana pancakes');
-    //     $newRecipe1 ->setIngredients('banana, eggs, oil');
-    //     $newRecipe1 ->setDifficulty('easy');
-
-    //     $entityManager->persist($newRecipe);
-    //     $entityManager->persist($newRecipe1);
-
-    //     $entityManager->flush();
-        
-    //     return new Response('trying to add new recipe...' . $newRecipe->getId() . " and " . $newRecipe1->getId());
-    // }
-
-
     /**
      * @Route("/recipe/all", name="get_all_recipe")
      */
@@ -98,6 +84,7 @@ class HomeScreenController extends AbstractController
 
         foreach($recipes as $recipe) {
             $response[]=array(
+                'id' => $recipe->getId(),
                 'name'=>$recipe->getName(),
                 'ingredients'=>$recipe->getIngredients(),
                 'difficulty'=>$recipe->getDifficulty()
