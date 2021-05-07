@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Recipe; 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,44 +11,99 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeScreenController extends AbstractController
 {
-    /**
-     * @Route("/home/", name="home_screen", methods={"POST", "DELETE", "GET"})
-     */
 
-    public function index(Request $request):Response {
-//        $resp = new Response('<h1>Hello there!</h1>');
-//        return $resp;
-//        return $this->json(['message'=>'Hi! this is a json response']);
-        return $this->json(['message'=> $request->query->get('page'),
-            'path'=>'src/Controller/HomeScreenController.php',
-            ]);
-    }
+//     Update /recipe/add route so that it adds new recipe according to request parameters such as
+// /recipe/add?name=pancake&ingredients=flour,egg,milk&difficulty=medium
 
     /**
-     * @Route("/recipes/all", name="get_all_recipes", methods={"GET"})
+     * @Route("/recipe/add?name={name}&ingredients={ingredients}&difficulty={difficulty}",name="add_new_recipe")
      */
-        public function getAllRecipes() {
-            $rootPath = $this->getParameter('kernel.project_dir');
-            $recipes = file_get_contents($rootPath.'/resources/recipes.json');
-            $decodedRecipes = json_decode($recipes, true);
+    public function addRecipe($name, $ingredients, $difficulty){
+        $entityManager = $this->getDoctrine()->getManager();
 
-            return $this->json($decodedRecipes);
+        $newRecipe2 = new Recipe();
+        $newRecipe2->setName($name);
+        $newRecipe2->setIngredients($ingredients);
+        $newRecipe2->setDifficulty($difficulty);
 
+
+        $entityManager->persist($this.recipe);
+
+        $entityManager->flush();
+
+        return new Response('trying to add new recipe...' . $this.recipe->getId());
     }
+    
     /**
-     * @Route("/recipe/{id}", name="get_a_recipe", methods={"GET"})
+     * @Route("/recipe/more?name={name}&ingredients={ingredients}&difficulty={difficulty}", name="put_a_recipe", methods={"GET"})
      */
-    public function recipe($id, Request $request) {
-        return $this->json([
-            'message'=>'Requesting recipe with id' . $id,
-            'page'=>   $request->query->get('page')
-        ]);
+
+    public function recipe($name, $ingredients, $difficulty) {
+        
+        echo $name;
+        return $difficulty;
     }
+        // $newRecipe2 = new Recipe();
+        // $newRecipe2->setName($name);
+        // $newRecipe2->setIngredients($ingredients);
+        // $newRecipe2->setDifficulty($difficulty);
+
+        // $entityManager->persist($newRecipe2);
+
+        // $entityManager->flush();
+
+
+        // return $this->json([
+        //     'message'=>'Adding a new recipe' . $name,
+        //     'page'=>   $request->query->get('name')
+        // ]);
+
+        // $this->json([
+        //     $this.recipe.name=>$request->query->get('name'),
+        //     $this.recipe.ingredients=>$request->query->get('ingredients'),
+        //     $this.recipe.difficulty=>$request->query->get('difficulty')
+            
+        //     return new Response('trying to add new recipe according to params...' . $newRecipe2->getId());
+        // ]);
+
+
+    //     $entityManager = $this->getDoctrine()->getManager();
+
+    //     $newRecipe = new Recipe();
+    //     $newRecipe ->setName('Omelette');
+    //     $newRecipe ->setIngredients('eggs, oil, milk');
+    //     $newRecipe ->setDifficulty('easy');
+
+    //     $newRecipe1 = new Recipe();
+    //     $newRecipe1 ->setName('banana pancakes');
+    //     $newRecipe1 ->setIngredients('banana, eggs, oil');
+    //     $newRecipe1 ->setDifficulty('easy');
+
+    //     $entityManager->persist($newRecipe);
+    //     $entityManager->persist($newRecipe1);
+
+    //     $entityManager->flush();
+        
+    //     return new Response('trying to add new recipe...' . $newRecipe->getId() . " and " . $newRecipe1->getId());
+    // }
+
 
     /**
-     * @Route("/other")
+     * @Route("/recipe/all", name="get_all_recipe")
      */
-    public function other() {
-        return $this->redirect('home');
+    public function getAllRecipe(){
+        $recipes = $this->getDoctrine()->getRepository(Recipe::class)->findAll();
+
+        $response=[];
+
+        foreach($recipes as $recipe) {
+            $response[]=array(
+                'name'=>$recipe->getName(),
+                'ingredients'=>$recipe->getIngredients(),
+                'difficulty'=>$recipe->getDifficulty()
+            );
+        }
+        return $this->json($response);
     }
+
 }
