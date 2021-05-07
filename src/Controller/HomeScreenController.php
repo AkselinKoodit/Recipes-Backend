@@ -21,21 +21,16 @@ class HomeScreenController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $newRecipe = new Recipe();
-        $newRecipe->setName('Omelette');
-        $newRecipe->setIngredients('eggs, oil, milk');
-        $newRecipe->setDifficulty('easy');
+        $newRecipe->setName($_GET["name"]);
+        $newRecipe->setIngredients($_GET["ingredients"]);
+        $newRecipe->setDifficulty($_GET["difficulty"]);
 
-        $newRecipe1 = new Recipe();
-        $newRecipe1->setName('banana pancakes');
-        $newRecipe1->setIngredients('banana, eggs, oil');
-        $newRecipe1->setDifficulty('easy');
 
         $entityManager->persist($newRecipe);
-        $entityManager->persist($newRecipe1);
 
         $entityManager->flush();
 
-        return new Response('Trying to add new recipe...' . $newRecipe->getId() . " and " . $newRecipe1->getId());
+        return new Response('Trying to add new recipe...' . $newRecipe->getId());
     }
 
     /**
