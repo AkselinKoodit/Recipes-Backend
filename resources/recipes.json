@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "spinach crepes",
+    "imageUrl": "something",
     "prepTime": "15min",
     "servings": "2",
     "ingredients": [
@@ -26,7 +27,6 @@
         "quantity": "4dl"
       }
     ],
-    "image": "",
     "instructions": "mix everything and pan fry it"
   },
   {
@@ -52,7 +52,7 @@
       }
     ],
     "instructions": "mix everything and pan fry it",
-    "image": ""
+    "imageUrl": "something"
   },
   {
     "id": 3,
@@ -82,7 +82,7 @@
       }
     ],
     "instructions": "mix everything and boil it",
-    "image": ""
+    "imageUrl": "something"
   },
   {
     "name": "mashed potato",
@@ -106,7 +106,7 @@
       }
     ],
     "instructions": "Boil potatoes like forever, add plenty of butter, mash that shit and voilá",
-    "image": "",
+    "imageUrl": "something",
     "id": 9
   },
   {
@@ -135,7 +135,7 @@
         "quantity": "100gr"
       }
     ],
-    "image": "",
+    "imageUrl": "something",
     "instructions": "sekoita ja, anna turvota ja paista voissa pannulla",
     "id": 10
   },
@@ -165,7 +165,7 @@
         "quantity": "2tsp"
       }
     ],
-    "image": "",
+    "imageUrl": "something",
     "instructions": "prepare it and lurps!",
     "id": 11
   },
@@ -197,7 +197,7 @@
     ],
     "instructions": "white wine on pan, add rice. Add stock little by little.",
     "id": 12,
-    "image": ""
+    "imageUrl": "something"
   },
   {
     "name": "Cabbage rolls",
@@ -226,7 +226,7 @@
       }
     ],
     "instructions": "boil, stuff,roll and bake the cabbage in oven.",
-    "image": "https://images.ctfassets.net/0yf82hjfqumz/ExbLYYZqy4OuMmg0SoiC0/992b5493526b6d327a2ebdd6a49d187e/962becf6-cd75-5d44-aa18-995f4a6359f8.jpg?fit=fill&h=900&q=60&w=1600",
+    "imageUrl": "https://images.ctfassets.net/0yf82hjfqumz/ExbLYYZqy4OuMmg0SoiC0/992b5493526b6d327a2ebdd6a49d187e/962becf6-cd75-5d44-aa18-995f4a6359f8.jpg?fit=fill&h=900&q=60&w=1600",
     "id": 13
   },
   {
@@ -234,7 +234,7 @@
     "prepTime": "999",
     "servings": "10",
     "instructions": "boil water, mix in sugar, lemon juice and lemon peel. After temperature drops to lukewarm, add yeast and let magic happen under lid over night. Next day bottle the mead and add a few riaisns to each bottle and pinch of sugar. Skrew caps on loosely. After couple days tighten the caps. After raisins have risen, mead is ready. ",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sima_and_tippaleip%C3%A4_2.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sima_and_tippaleip%C3%A4_2.jpg",
     "ingredients": [
       {
         "id": 1,
@@ -275,7 +275,7 @@
     "servings": "6",
     "incredients": [],
     "instructions": "make tomato sauce on  a pan and add lentils. \nGrate mozzarella to creme fraiche. \nPan fry sliced aubergine.\nbut pasta, tomatosauce, mozzarellasauce, pesto in layers to a dish add cherry tomatoes on top. Bake in oven for 45min-1h. ",
-    "image": "https://images.ctfassets.net/0yf82hjfqumz/5H20DHujS0OMyOAYWMIKqu/21a5e5f2a026ee0dcaeb3c17d89b3da5/d78ff5d0-38a0-557c-b25b-68f2bb47000c.jpg?fit=fill&h=900&q=60&w=1600",
+    "imageUrl": "https://images.ctfassets.net/0yf82hjfqumz/5H20DHujS0OMyOAYWMIKqu/21a5e5f2a026ee0dcaeb3c17d89b3da5/d78ff5d0-38a0-557c-b25b-68f2bb47000c.jpg?fit=fill&h=900&q=60&w=1600",
     "ingredients": [
       {
         "id": 1,
@@ -331,7 +331,7 @@
     "servings": "1",
     "incredients": [],
     "instructions": "test testing and try it",
-    "image": "",
+    "imageUrl": "something",
     "ingredients": [
       {
         "id": 1,

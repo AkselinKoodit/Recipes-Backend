@@ -28,7 +28,7 @@ class Recipe
     private $ingredients=[];
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
 
