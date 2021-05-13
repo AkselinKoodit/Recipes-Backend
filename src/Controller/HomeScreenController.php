@@ -21,8 +21,8 @@ class HomeScreenController extends AbstractController
         $data=json_decode($request->getContent(), true);
         $newRecipe = new Recipe();
         $newRecipe->setName($data["name"]);
-        //$newRecipe->setIngredients($data["ingredients"]);
-        $newRecipe->setIngredients(["test1", "ingr2", "ingredient3"]);
+        $newRecipe->setIngredients($data["ingredients"]);
+        //$newRecipe->setIngredients(["test1", "ingr2", "ingredient3"]);
         $newRecipe->setImage($data["image"]);
         $newRecipe->setPrepTime($data["prepTime"]);
         $newRecipe->setServings($data["servings"]);
