@@ -1,28 +1,349 @@
-{
-  "recipes": [
+[
   {
-    "id": "1",
-    "title": "waffle",
-    "ingredients": "eggs, flour, water, sugar",
-    "difficulty": "easy"
+    "id": 1,
+    "name": "spinach crepes",
+    "prepTime": "15min",
+    "servings": "2",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "spinach",
+        "quantity": "150gr"
+      },
+      {
+        "id": 2,
+        "ingredientName": "milk",
+        "quantity": "4dl"
+      },
+      {
+        "id": 3,
+        "ingredientName": "eggs",
+        "quantity": "1"
+      },
+      {
+        "id": 4,
+        "ingredientName": "flour",
+        "quantity": "4dl"
+      }
+    ],
+    "image": "",
+    "instructions": "mix everything and pan fry it"
   },
-    {
-    "id": "2",
-    "title": "boiled potato",
-    "ingredients": "potato, water",
-    "difficulty": "easy"
+  {
+    "id": 2,
+    "name": "banana pancakes",
+    "prepTime": "15min",
+    "servings": "2",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "banana",
+        "quantity": "1"
+      },
+      {
+        "id": 3,
+        "ingredientName": "eggs",
+        "quantity": "1"
+      },
+      {
+        "id": 4,
+        "ingredientName": "salt",
+        "quantity": "pinch"
+      }
+    ],
+    "instructions": "mix everything and pan fry it",
+    "image": ""
   },
-    {
-    "id": "3",
-    "title": "noodles",
-    "ingredients": "noodles, water",
-    "difficulty": "easy"
+  {
+    "id": 3,
+    "name": "chicken soup",
+    "prepTime": "25min",
+    "servings": "4",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "chicken",
+        "quantity": "400gr"
+      },
+      {
+        "id": 2,
+        "ingredientName": "vegetables",
+        "quantity": "500gr"
+      },
+      {
+        "id": 3,
+        "ingredientName": "water",
+        "quantity": "1l"
+      },
+      {
+        "id": 4,
+        "ingredientName": "spices",
+        "quantity": "some"
+      }
+    ],
+    "instructions": "mix everything and boil it",
+    "image": ""
   },
-    {
-    "id": "4",
-    "title": "omelette",
-    "ingredients": "eggs, oil",
-    "difficulty": "medium"
+  {
+    "name": "mashed potato",
+    "prepTime": "30",
+    "servings": "4",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "potato",
+        "quantity": "1kg"
+      },
+      {
+        "id": 2,
+        "ingredientName": "butter",
+        "quantity": "plenty"
+      },
+      {
+        "id": 3,
+        "ingredientName": "milk/cream",
+        "quantity": "enough"
+      }
+    ],
+    "instructions": "Boil potatoes like forever, add plenty of butter, mash that shit and voilá",
+    "image": "",
+    "id": 9
+  },
+  {
+    "name": "lettutaikina",
+    "prepTime": "60",
+    "servings": "4",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "jauhoja",
+        "quantity": "4dlgr"
+      },
+      {
+        "id": 2,
+        "ingredientName": "maitoa",
+        "quantity": "4dl"
+      },
+      {
+        "id": 3,
+        "ingredientName": "eggs",
+        "quantity": "2"
+      },
+      {
+        "id": 4,
+        "ingredientName": "voita",
+        "quantity": "100gr"
+      }
+    ],
+    "image": "",
+    "instructions": "sekoita ja, anna turvota ja paista voissa pannulla",
+    "id": 10
+  },
+  {
+    "name": "halloumi stew",
+    "prepTime": "60",
+    "servings": "4",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "halloumi",
+        "quantity": "300gr"
+      },
+      {
+        "id": 2,
+        "ingredientName": "tomatosauce",
+        "quantity": "500ml"
+      },
+      {
+        "id": 3,
+        "ingredientName": "eggplant",
+        "quantity": "1"
+      },
+      {
+        "id": 4,
+        "ingredientName": "cumin",
+        "quantity": "2tsp"
+      }
+    ],
+    "image": "",
+    "instructions": "prepare it and lurps!",
+    "id": 11
+  },
+  {
+    "name": "risotto",
+    "prepTime": "60",
+    "servings": "4",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "arborio rice",
+        "quantity": "300gr"
+      },
+      {
+        "id": 2,
+        "ingredientName": "parmesan",
+        "quantity": "a looot"
+      },
+      {
+        "id": 3,
+        "ingredientName": "butter",
+        "quantity": "200g"
+      },
+      {
+        "id": 4,
+        "ingredientName": "water",
+        "quantity": "1,5l"
+      }
+    ],
+    "instructions": "white wine on pan, add rice. Add stock little by little.",
+    "id": 12,
+    "image": ""
+  },
+  {
+    "name": "Cabbage rolls",
+    "prepTime": "45",
+    "servings": "4",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "cabbage",
+        "quantity": "4l"
+      },
+      {
+        "id": 2,
+        "ingredientName": "minced meat",
+        "quantity": "300g"
+      },
+      {
+        "id": 3,
+        "ingredientName": "porridge rice",
+        "quantity": "200g"
+      },
+      {
+        "id": 4,
+        "ingredientName": "lingonberry jam",
+        "quantity": "1"
+      }
+    ],
+    "instructions": "boil, stuff,roll and bake the cabbage in oven.",
+    "image": "https://images.ctfassets.net/0yf82hjfqumz/ExbLYYZqy4OuMmg0SoiC0/992b5493526b6d327a2ebdd6a49d187e/962becf6-cd75-5d44-aa18-995f4a6359f8.jpg?fit=fill&h=900&q=60&w=1600",
+    "id": 13
+  },
+  {
+    "name": "Mead (sima)",
+    "prepTime": "999",
+    "servings": "10",
+    "instructions": "boil water, mix in sugar, lemon juice and lemon peel. After temperature drops to lukewarm, add yeast and let magic happen under lid over night. Next day bottle the mead and add a few riaisns to each bottle and pinch of sugar. Skrew caps on loosely. After couple days tighten the caps. After raisins have risen, mead is ready. ",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sima_and_tippaleip%C3%A4_2.jpg",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "water",
+        "quantity": "4l"
+      },
+      {
+        "id": 2,
+        "ingredientName": "farin suger",
+        "quantity": "300g"
+      },
+      {
+        "id": 3,
+        "ingredientName": "white sugar",
+        "quantity": "200g"
+      },
+      {
+        "id": 4,
+        "ingredientName": "lemon",
+        "quantity": "1"
+      },
+      {
+        "id": 5,
+        "ingredientName": "yeast",
+        "quantity": "5g"
+      },
+      {
+        "id": 6,
+        "ingredientName": "raisins",
+        "quantity": "handful"
+      }
+    ],
+    "id": 14
+  },
+  {
+    "name": "vegetarian lasagne",
+    "prepTime": "90",
+    "servings": "6",
+    "incredients": [],
+    "instructions": "make tomato sauce on  a pan and add lentils. \nGrate mozzarella to creme fraiche. \nPan fry sliced aubergine.\nbut pasta, tomatosauce, mozzarellasauce, pesto in layers to a dish add cherry tomatoes on top. Bake in oven for 45min-1h. ",
+    "image": "https://images.ctfassets.net/0yf82hjfqumz/5H20DHujS0OMyOAYWMIKqu/21a5e5f2a026ee0dcaeb3c17d89b3da5/d78ff5d0-38a0-557c-b25b-68f2bb47000c.jpg?fit=fill&h=900&q=60&w=1600",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "lasagne pasta",
+        "quantity": "300gr"
+      },
+      {
+        "id": 2,
+        "ingredientName": "tomatosauce ",
+        "quantity": "500gr"
+      },
+      {
+        "id": 3,
+        "ingredientName": "cherry tomatoes",
+        "quantity": "250gr"
+      },
+      {
+        "id": 4,
+        "ingredientName": "crème fraiche",
+        "quantity": "4dl"
+      },
+      {
+        "id": 5,
+        "ingredientName": "mozzarella",
+        "quantity": "2 balls"
+      },
+      {
+        "id": 6,
+        "ingredientName": "eggplant",
+        "quantity": "1"
+      },
+      {
+        "id": 7,
+        "ingredientName": "baby spinach",
+        "quantity": "1 "
+      },
+      {
+        "id": 8,
+        "ingredientName": "pesto",
+        "quantity": "4dl"
+      },
+      {
+        "id": 9,
+        "ingredientName": "red lentils",
+        "quantity": "2dl"
+      }
+    ],
+    "id": 15
+  },
+  {
+    "name": "test burger",
+    "prepTime": "5",
+    "servings": "1",
+    "incredients": [],
+    "instructions": "test testing and try it",
+    "image": "",
+    "ingredients": [
+      {
+        "id": 1,
+        "ingredientName": "burgers",
+        "quantity": "5 "
+      },
+      {
+        "id": 2,
+        "ingredientName": "carrots",
+        "quantity": "0"
+      }
+    ],
+    "id": 16
   }
 ]
-}

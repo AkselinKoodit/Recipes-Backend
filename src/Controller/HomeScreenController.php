@@ -13,18 +13,21 @@ class HomeScreenController extends AbstractController
 {
 
     /**
-     * @Route("/recipe/add", name="add_new_recipe")
+     * @Route("/recipe/add", name="add_new_recipe", methods={"POST"})
      */
-    public function addRecipe()
-    {
+    public function addRecipe(Request $request) {
 
         $entityManager = $this->getDoctrine()->getManager();
 
-        $newRecipe = new Recipe();
-        $newRecipe->setName($_GET["name"]);
-        $newRecipe->setIngredients($_GET["ingredients"]);
-        $newRecipe->setDifficulty($_GET["difficulty"]);
+        $data=json_decode($request->getContent(), true);
 
+        $newRecipe = new Recipe();
+        $newRecipe->setName($data["name"]);
+        $newRecipe->setIngredients($data["ingredients"]);
+        $newRecipe->setImage($data["image"]);
+        $newRecipe->setPrepTime($data["prepTime"]);
+        $newRecipe->setServings($data["servings"]);
+        $newRecipe->setInstructions($data["instructions"]);
 
         $entityManager->persist($newRecipe);
 
@@ -47,7 +50,10 @@ class HomeScreenController extends AbstractController
                 'id' => $recipe->getId(),
                 'name' => $recipe->getName(),
                 'ingredients' => $recipe->getIngredients(),
-                'difficulty' => $recipe->getDifficulty()
+                'image' => $recipe->getImage(),
+                'prepTime' => $recipe->getPrepTime(),
+                'servings' => $recipe->getServings(),
+                'instructions' => $recipe->getInstructions()
             );
         }
         return $this->json($response);
@@ -69,7 +75,10 @@ class HomeScreenController extends AbstractController
                 'id' => $recipe->getId(),
                 'name' => $recipe->getName(),
                 'ingredients' => $recipe->getIngredients(),
-                'difficulty' => $recipe->getDifficulty()
+                'image' => $recipe->getImage(),
+                'prepTime' => $recipe->getPrepTime(),
+                'servings' => $recipe->getServings(),
+                'instructions' => $recipe->getInstructions()
             ]);
         }
     }

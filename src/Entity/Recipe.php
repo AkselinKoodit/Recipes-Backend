@@ -23,14 +23,29 @@ class Recipe
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="array")
      */
-    private $ingredients;
+    private $ingredients=[];
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=100)
      */
-    private $difficulty;
+    private $image;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $prepTime;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $servings;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $instructions;
 
     public function getId(): ?int
     {
@@ -49,26 +64,62 @@ class Recipe
         return $this;
     }
 
-    public function getIngredients(): ?string
+    public function getIngredients(): ?array
     {
         return $this->ingredients;
     }
 
-    public function setIngredients(string $ingredients): self
+    public function setIngredients(array $ingredients): self
     {
         $this->ingredients = $ingredients;
 
         return $this;
     }
 
-    public function getDifficulty(): ?string
+    public function getImage(): ?string
     {
-        return $this->difficulty;
+        return $this->image;
     }
 
-    public function setDifficulty(string $difficulty): self
+    public function setImage(string $image): self
     {
-        $this->difficulty = $difficulty;
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getPrepTime(): ?int
+    {
+        return $this->prepTime;
+    }
+
+    public function setPrepTime(int $prepTime): self
+    {
+        $this->prepTime = $prepTime;
+
+        return $this;
+    }
+
+    public function getServings(): ?int
+    {
+        return $this->prepTime;
+    }
+
+    public function setServings(int $servings): self
+    {
+        $this->servings = $servings;
+
+        return $this;
+    }
+
+    public function getInstructions(): ?string
+    {
+        return $this->instructions;
+    }
+
+    public function setInstructions(string $instructions): self
+    {
+        $this->instructions = $instructions;
 
         return $this;
     }
