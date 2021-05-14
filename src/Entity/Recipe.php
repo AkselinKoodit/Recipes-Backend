@@ -102,7 +102,7 @@ class Recipe
 
     public function getServings(): ?int
     {
-        return $this->prepTime;
+        return $this->servings;
     }
 
     public function setServings(int $servings): self
